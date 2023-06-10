@@ -6,21 +6,58 @@
     <!-- Add some CSS to change client UI -->
     <style>
     body {
-        background-image: url('image.jpg');
-        background-size: cover;
-        background-position: center;
+        background-image: linear-gradient(to bottom right, #fcd786, #79c9f7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
     }
-    label, button {
-        color: #FF9900;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        margin-left: 40px;
+    
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 100%;
     }
-    input {
-        color: #232F3E;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        margin-left: 20px;
+    
+    h1 {
+        text-align: center;
+        color: lightskyblue;
+        margin-bottom: 30px;
+    }
+    
+    label {
+        display: block;
+        color: #333333;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    button[type="button"] {
+        background-color: hsl(254, 100%, 68%);
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button[type="button"]:hover {
+        background-color: hsl(143, 100%, 62%);
     }
     </style>
     <script>
@@ -58,9 +95,10 @@
 </head>
 <body>
     <form>
-        <label>First Name:</label>
+        <h1>Please Enter Your Name</h1>
+        <label for="fName">First Name:</label>
         <input type="text" id="fName">
-        <label>Last Name:</label>
+        <label for="lName">Last Name:</label>
         <input type="text" id="lName">
         <button type="button" onclick="callAPI()">Submit</button>
     </form>
